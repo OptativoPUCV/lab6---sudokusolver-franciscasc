@@ -64,7 +64,7 @@ void busqueda(Node * nodoNuevo, int aumento){
 
 List* get_adj_nodes(Node* n){
     List* list = createList();
-    int h, z, m;
+    int h;
     //char nuevoMov;
     /*if(n->ultimoM == '0'){
       nuevoMov = '0';
