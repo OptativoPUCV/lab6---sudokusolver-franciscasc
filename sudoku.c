@@ -72,8 +72,8 @@ List* get_adj_nodes(Node* n){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
-      if(nuevoMov == true){
-        
+      if(nuevoMov != true){
+        break;
       }
     //esto no fucionó
       /*for(m = 0; m < 9; m++){
