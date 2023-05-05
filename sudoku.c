@@ -53,7 +53,7 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
     List* list = createList();
     int h, z, m;
-    char nuevoMov;
+    //char nuevoMov;
     /*if(n->ultimoM == '0'){
       nuevoMov = '0';
     }*/
