@@ -53,7 +53,7 @@ bool busqueda(Node * nodoNuevo, int aumento, bool mov){
   int m, z;
   for(m = 0; m < 9; m++){
     for(z = 0; z < 9; z++){
-      if(nodoNuevo->sudo[m][z] == 0 || mov == false){
+      if(nodoNuevo->sudo[m][z] == 0 && mov == false){
         nodoNuevo->sudo[m][z] = aumento;
         mov = true;
         return mov;
@@ -73,7 +73,7 @@ List* get_adj_nodes(Node* n){
       nodoNuevo = copy(n);
       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
       if(nuevoMov == true){
-        break;
+        
       }
     //esto no fucionó
       /*for(m = 0; m < 9; m++){
