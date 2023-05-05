@@ -58,12 +58,14 @@ List* get_adj_nodes(Node* n){
 
     }*/
     for(h = 0; h < 9; h++){
-      for(z= 0; z<9;z++){
-        Node* nodoNuevo = createNode();
-        nodoNuevo = copy(n);
-        pushBack(list, nodoNuevo);
-        
+      Node* nodoNuevo = createNode();
+      nodoNuevo = copy(n);
+      for(z= 0; z < 9; z++){
+        if(n->sudo[h][z] == '0'){
+          
+        }
       }
+      pushBack(list, nodoNuevo);
     }
     return list;
 }
@@ -74,11 +76,11 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  Stack * S = createStack(); 
+  /*Stack * S = createStack(); 
 
   while(S != NULL){
     
-  }
+  }*/
   
   return NULL;
 }
@@ -86,7 +88,7 @@ Node* DFS(Node* initial, int* cont){
 
 
 
-int main( int argc, char *argv[] ){
+/*int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
 
@@ -96,4 +98,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}
+}*/
