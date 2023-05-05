@@ -39,3 +39,14 @@ Fri 05 May 2023 12:50:34 PM UTC:
  tests:  0|5
 total_score: 0/70
 5f34a09
+Fri 05 May 2023 01:01:02 PM UTC: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:65:25: error: ‘nuevoMov’ may be used uninitialized [-Werror=maybe-uninitialized]
+   65 |           n->sudo[h][z] = nuevoMov;
+      |           ~~~~~~~~~~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+279764a

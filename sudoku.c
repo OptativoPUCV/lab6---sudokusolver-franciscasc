@@ -53,7 +53,7 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
     List* list = createList();
     int h, z;
-    //char nuevoMov;
+    char nuevoMov;
     /*if(n->ultimoM == '0'){
 
     }*/
@@ -62,6 +62,7 @@ List* get_adj_nodes(Node* n){
       nodoNuevo = copy(n);
       for(z= 0; z < 9; z++){
         if(n->sudo[h][z] == '0'){
+          n->sudo[h][z] = nuevoMov;
           
         }
       }
