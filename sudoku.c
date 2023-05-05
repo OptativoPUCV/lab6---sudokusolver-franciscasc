@@ -52,20 +52,21 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list = createList();
-    int h, z;
+    int h, z, m;
     char nuevoMov;
-    if(n->ultimoM == '0'){
+    /*if(n->ultimoM == '0'){
       nuevoMov = '0';
-    }
+    }*/
     for(h = 0; h < 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
-      for(z= 0; z < 9; z++){
+      for(m = 0; m < 9; m++){
+        for(z= 0; z < 9; z++){
         if(n->sudo[h][z] == '0'){
-          n->sudo[h][z] = nuevoMov;
-          
+          n->sudo[h][z] = m++;
         }
       }
+    }
       pushBack(list, nodoNuevo);
     }
     return list;
