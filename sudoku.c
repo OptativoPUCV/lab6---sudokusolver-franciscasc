@@ -5,6 +5,7 @@
 
 typedef struct{
    int sudo[9][9];
+   char ultimoM;
 }Node;
 
 Node* createNode(){
@@ -50,7 +51,20 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
+    List* list = createList();
+    int h, z;
+    //char nuevoMov;
+    /*if(n->ultimoM == '0'){
+
+    }*/
+    for(h = 0; h < 9; h++){
+      for(z= 0; z<9;z++){
+        Node* nodoNuevo = createNode();
+        nodoNuevo = copy(n);
+        pushBack(list, nodoNuevo);
+        
+      }
+    }
     return list;
 }
 
@@ -60,12 +74,18 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack * S = createStack(); 
+
+  while(S != NULL){
+    
+  }
+  
   return NULL;
 }
 
 
 
-/*
+
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -76,4 +96,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
