@@ -57,14 +57,16 @@ List* get_adj_nodes(Node* n){
     /*if(n->ultimoM == '0'){
 
     }*/
+    Node * nodoNuevo;
     for(h = 0; h < 9; h++){
       for(z = 0; z < 9; z++){
         if(n->sudo[h][z] == '0'){
-          Node* nodoNuevo = createNode();
+          nodoNuevo = createNode();
           nodoNuevo = copy(n);
-          pushBack(list, nodoNuevo);
+          
         }
-      }
+      } 
+      pushBack(list, nodoNuevo);
       /*Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
       for(z= 0; z < 9; z++){
