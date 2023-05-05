@@ -54,9 +54,9 @@ List* get_adj_nodes(Node* n){
     List* list = createList();
     int h, z;
     char nuevoMov;
-    /*if(n->ultimoM == '0'){
-
-    }*/
+    if(n->ultimoM == '0'){
+      nuevoMov = '0';
+    }
     for(h = 0; h < 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
