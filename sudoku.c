@@ -62,14 +62,14 @@ List* get_adj_nodes(Node* n){
       nodoNuevo = copy(n);
       for(m = 0; m < 9; m++){
         for(z= 0; z < 9; z++){
-        if(n->sudo[h][z] == '0'){
-          n->sudo[h][z] = m++;
+          if(n->sudo[h][z] == '0'){
+            n->sudo[h][z] = m++;
+          }
         }
-      }
+        pushBack(list, nodoNuevo);
+     }
     }
-      pushBack(list, nodoNuevo);
-    }
-    return list;
+  return list;
 }
 
 
