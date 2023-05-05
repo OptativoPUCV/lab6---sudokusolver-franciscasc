@@ -6,7 +6,6 @@
 
 typedef struct{
    int sudo[9][9];
-   char ultimoM;
 }Node;
 
 Node* createNode(){
@@ -49,11 +48,12 @@ int is_valid(Node* n){
 
     return 1;
 }
+
 bool busqueda(Node * nodoNuevo, int aumento, bool mov){
   int m, z;
   for(m = 0; m < 9; m++){
     for(z = 0; z < 9; z++){
-      if(nodoNuevo->sudo[m][z] == 0 && mov == false){
+      if(nodoNuevo->sudo[m][z] == 0){
         nodoNuevo->sudo[m][z] = aumento;
         mov = true;
         return mov;
@@ -82,7 +82,8 @@ List* get_adj_nodes(Node* n){
             n->sudo[m][z] = h;
             break;
           }
-        }*/
+        }
+      }*/
       pushBack(list, nodoNuevo);
     }
   return list;
