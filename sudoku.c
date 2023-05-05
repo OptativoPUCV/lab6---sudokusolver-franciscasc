@@ -58,14 +58,21 @@ List* get_adj_nodes(Node* n){
 
     }*/
     for(h = 0; h < 9; h++){
-      Node* nodoNuevo = createNode();
+      for(z = 0; z < 9; z++){
+        if(n->sudo[h][z] == '0'){
+          Node* nodoNuevo = createNode();
+          nodoNuevo = copy(n);
+          pushBack(list, nodoNuevo);
+        }
+      }
+      /*Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
       for(z= 0; z < 9; z++){
         if(n->sudo[h][z] == '0'){
           
         }
-      }
-      pushBack(list, nodoNuevo);
+      }*/
+      
     }
     return list;
 }
