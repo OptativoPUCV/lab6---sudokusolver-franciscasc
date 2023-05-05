@@ -67,7 +67,7 @@ List* get_adj_nodes(Node* n){
     /*if(n->ultimoM == '0'){
       nuevoMov = '0';
     }*/
-    for(h = 1; h < 9; h++){
+    for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
       //busqueda(nodoNuevo, h);
