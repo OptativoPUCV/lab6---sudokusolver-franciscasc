@@ -75,7 +75,7 @@ List* get_adj_nodes(Node* n){
       for(m = 0; m < 9; m++){
         for(z= 0; z < 9; z++){
           if(n->sudo[m][z] == '0'){
-            n->sudo[m][z] = h++;
+            n->sudo[m][z] = h;
             break;
           }
         }
