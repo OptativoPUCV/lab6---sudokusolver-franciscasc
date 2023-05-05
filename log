@@ -129,3 +129,14 @@ Fri 05 May 2023 01:18:24 PM UTC:
  tests:  0|5
 total_score: 0/70
 60dee94
+Fri 05 May 2023 01:33:13 PM UTC: 
+ sudoku.c | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:75:18: error: ‘nuevoMov’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   75 |       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+79717a1

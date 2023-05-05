@@ -49,31 +49,31 @@ int is_valid(Node* n){
     return 1;
 }
 
-void busqueda(Node * nodoNuevo, int aumento){
+char busqueda(Node * nodoNuevo, int aumento, char mov){
   int m, z;
   for(m = 0; m < 9; m++){
     for(z= 0; z < 9; z++){
       if(nodoNuevo->sudo[m][z] == '0'){
         nodoNuevo->sudo[m][z] = aumento;
+        mov = nodoNuevo->sudo[m][z];
+        return mov;
         break;
       }
     }
   }
-  return;
+  return mov ;
 }
 
 List* get_adj_nodes(Node* n){
     List* list = createList();
     int h;
-    //char nuevoMov;
-    /*if(n->ultimoM == '0'){
-      nuevoMov = '0';
-    }*/
+    char nuevoMov;
+    if(!n)return NULL;
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
-      busqueda(nodoNuevo, h);
-      
+      nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
+    //esto no fucionó
       /*for(m = 0; m < 9; m++){
         for(z= 0; z < 9; z++){
           if(n->sudo[m][z] == '0'){
