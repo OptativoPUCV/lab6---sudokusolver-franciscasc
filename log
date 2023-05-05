@@ -140,3 +140,9 @@ sudoku.c:75:18: error: ‘nuevoMov’ may be used uninitialized in this function
 cc1: all warnings being treated as errors
 Compilation failed
 79717a1
+Fri 05 May 2023 01:35:54 PM UTC: 
+ sudoku.c | 14 ++++++++------
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+ tests:  0|5
+total_score: 0/70
+bcda434

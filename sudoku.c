@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "list.h"
 
 
@@ -48,31 +49,32 @@ int is_valid(Node* n){
 
     return 1;
 }
-
-char busqueda(Node * nodoNuevo, int aumento, char mov){
+bool busqueda(Node * nodoNuevo, int aumento, bool mov){
   int m, z;
   for(m = 0; m < 9; m++){
     for(z= 0; z < 9; z++){
       if(nodoNuevo->sudo[m][z] == '0'){
         nodoNuevo->sudo[m][z] = aumento;
-        mov = nodoNuevo->sudo[m][z];
+        mov = true;
         return mov;
-        break;
       }
     }
   }
-  return mov ;
+  return false ;
 }
 
 List* get_adj_nodes(Node* n){
     List* list = createList();
     int h;
-    char nuevoMov;
-    if(!n)return NULL;
+    bool nuevoMov = false;
+    if(!n) return NULL;
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
+      if(nuevoMov == true){
+        
+      }
     //esto no fucionó
       /*for(m = 0; m < 9; m++){
         for(z= 0; z < 9; z++){
