@@ -49,16 +49,18 @@ int is_valid(Node* n){
     return 1;
 }
 
-/*void busqueda(Node * nodoNuevo, int aumento){
+void busqueda(Node * nodoNuevo, int aumento){
   int m, z;
   for(m = 0; m < 9; m++){
     for(z= 0; z < 9; z++){
-      if(nodoNuevo->sudo[][z] == '0'){
-          nodoNuevo->sudo[][z] = m++;
-            break;
-          }
-        }
-}*/
+      if(nodoNuevo->sudo[m][z] == '0'){
+        nodoNuevo->sudo[m][z] = aumento;
+        break;
+      }
+    }
+  }
+  return;
+}
 
 List* get_adj_nodes(Node* n){
     List* list = createList();
@@ -70,17 +72,16 @@ List* get_adj_nodes(Node* n){
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
-      //busqueda(nodoNuevo, h);
+      busqueda(nodoNuevo, h);
       
-      for(m = 0; m < 9; m++){
+      /*for(m = 0; m < 9; m++){
         for(z= 0; z < 9; z++){
           if(n->sudo[m][z] == '0'){
             n->sudo[m][z] = h;
             break;
           }
-        }
-        pushBack(list, nodoNuevo);
-     }
+        }*/
+      pushBack(list, nodoNuevo);
     }
   return list;
 }

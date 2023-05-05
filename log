@@ -109,3 +109,17 @@ Fri 05 May 2023 01:16:24 PM UTC:
  tests:  0|5
 total_score: 0/70
 d160418
+Fri 05 May 2023 01:18:13 PM UTC: 
+ sudoku.c | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:67:15: error: unused variable ‘m’ [-Werror=unused-variable]
+   67 |     int h, z, m;
+      |               ^
+sudoku.c:67:12: error: unused variable ‘z’ [-Werror=unused-variable]
+   67 |     int h, z, m;
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+6cf15d9
