@@ -67,7 +67,7 @@ List* get_adj_nodes(Node* n){
     List* list = createList();
     int h;
     bool nuevoMov = false;
-    if(!n) return NULL;
+    if(n == NULL) return NULL;
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
