@@ -46,8 +46,8 @@ void print_node(Node* n){
 
 bool verificar(Node* n, int numero){
   int arreglo[10] = {};
-  int h = 0, z = 0;
-  for(h = h+1; h <= 9; h++){
+  int h, z = 0;
+  for(h = 0; h <= 9; h++){
     if(n->sudo[h][z] == numero){
       arreglo[h] = 1;
     }
@@ -64,9 +64,8 @@ bool verificar(Node* n, int numero){
 int is_valid(Node* n){
   int k, b;
   bool valido = false;
-  //int arreglo[10] = {};
+
   for(k = 0; k < 9; k++){
-    //printf("%d", arreglo[k]);
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
         valido = verificar(n, k);
