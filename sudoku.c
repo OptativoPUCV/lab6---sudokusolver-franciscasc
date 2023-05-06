@@ -128,7 +128,10 @@ List* get_adj_nodes(Node* n){
           }
         }
       }*/
-      pushBack(list, nodoNuevo);
+      if(is_valid(nodoNuevo)){
+        pushBack(list, nodoNuevo);
+      }
+      //pushBack(list, nodoNuevo);
     }
   return list;
 }
