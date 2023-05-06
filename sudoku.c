@@ -52,10 +52,6 @@ bool verificar(Node* n, int numero){
       arreglo[h] += 1;
       return false;
     }
-    else{
-      arreglo[h] += 0;
-      return true;
-    }
     z++;
   }
   
