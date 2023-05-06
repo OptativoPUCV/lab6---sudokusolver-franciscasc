@@ -154,12 +154,20 @@ Node* DFS(Node* initial, int* cont){
   push(S, initial);
   while(!is_empty(S)){
     Node * nodo = first(S);
-    nodo = pop(S);
-    if(is_final(nodo)) return nodo;
-    push(S, get_adj_nodes(nodo));
+    pop(S);
+    if(is_final(nodo)) 
+      return nodo;
+
+    List *listaAdy = get_adj_nodes(nodo);
+    Node *nodoAux = first(listaAdy);
+    if(nodoAux != NULL){
+      push(S, nodoAux);
+      nodoAux = next(listaAdy);
+    }
+    
     (*cont)++;
+   
   }
-  
   return NULL;
 }
 
