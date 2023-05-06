@@ -50,7 +50,7 @@ int is_valid(Node* n){
   for(k = 0; k < 9; k++){
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
-        for(m = 1; m <= 9; m++){
+        for(m = 1; m < 9; m++){
           if(n->sudo[k][m] == 0 && n->sudo[b][m] == 0){
             return 1;
             
