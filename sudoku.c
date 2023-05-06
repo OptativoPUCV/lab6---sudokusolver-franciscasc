@@ -167,9 +167,10 @@ Node* DFS(Node* initial, int* cont){
     }
     
     (*cont)++;
-    free(nodo);
+    
    
   }
+  free(initial);
   return NULL;
 }
 
