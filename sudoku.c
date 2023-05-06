@@ -6,7 +6,6 @@
 
 typedef struct{
    int sudo[9][9];
-    bool visitado;
 }Node;
 
 Node* createNode(){
