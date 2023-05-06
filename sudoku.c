@@ -49,7 +49,7 @@ bool verificar(Node* n, int numero){
   int z = 0;
   for(int h = 0; h < 9; h++){
     if(n->sudo[h][z] == numero){
-      arreglo[h] += 1;
+      arreglo[h] = 1;
       if(arreglo[h] > 1) 
         return false;
     }
@@ -59,7 +59,7 @@ bool verificar(Node* n, int numero){
   z = 0;
   for(int j = 0; j < 9; j++){
     if(n->sudo[j][z] == numero){
-      arreglo[j] += 1;
+      arreglo[j] = 1;
       if(arreglo[j] > 1)
         return false;
     }
@@ -72,7 +72,7 @@ bool verificar(Node* n, int numero){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
     if(n->sudo[h][z] == numero){
-      arreglo[p] += 1;
+      arreglo[p] = 1;
       if(arreglo[p] > 1) 
         return false;
     }
