@@ -175,6 +175,8 @@ Node* DFS(Node* initial, int* cont){
     }
     (*cont)++;
   } 
+
+  printf("%d", *cont);
   if(*cont == 0) return NULL;
   free(initial);
   return initial;
@@ -183,7 +185,7 @@ Node* DFS(Node* initial, int* cont){
 
 
 
-int main( int argc, char *argv[] ){
+/*int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
 
@@ -193,4 +195,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}
+}*/
