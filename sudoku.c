@@ -62,7 +62,7 @@ bool verificar(Node* n, int fila, int col, int numero){
     }
   }
 
-  /*recorrer matriz 3x3 función readme
+  //recorrer matriz 3x3 función readme
   int j = 4, p;
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
@@ -70,11 +70,10 @@ bool verificar(Node* n, int fila, int col, int numero){
     printf("%d", n->sudo[h][z]);
     if(p%3 == 2) printf("\n");
     if(n->sudo[h][z] == numero){
-      //arreglo[p] = 1;
-      //if(arreglo[p] > 1) 
-        return true;
+      arreglo[p] = 1;
+      if(arreglo[p] == 1) return true;
     }
-  }*/
+  }
   
   return false;
 }
@@ -113,7 +112,6 @@ List* get_adj_nodes(Node* n){
     if(n == NULL) return NULL;
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
-      //if(is_valid(n)) 
       nodoNuevo = copy(n);
       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
       if(nuevoMov != true)
@@ -126,9 +124,6 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-      }
-      if(is_valid(nodoNuevo)){
-        
       }*/
       pushBack(list, nodoNuevo);
     }
