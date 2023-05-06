@@ -59,18 +59,18 @@ int is_valid(Node* n){
       }
     }
   }
-  return 0;
+  //return 0;
 
   
-  //recorrer matriz 3x3
+  /*recorrer matriz 3x3
   int j = 4, p;
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
     printf("%d", n->sudo[h][z]);
     if(p%3 == 2) printf("\n");
-  }
-    return 1;
+  }*/
+    return 0;
 }
 
 bool busqueda(Node * nodoNuevo, int aumento, bool mov){
