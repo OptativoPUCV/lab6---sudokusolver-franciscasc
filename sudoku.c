@@ -46,10 +46,10 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-  int k, b;
+  /*int k, b;
   for(k = 0; k < 9; k++){
     
-  }
+  }*/
 
   
   //recorrer matriz 3x3
