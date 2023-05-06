@@ -54,16 +54,33 @@ bool verificar(Node* n, int numero){
     }
     z++;
   }
-  
-  
+
+  for(int j = 0; j < 9; j++){
+    if(n->sudo[j][z] == numero){
+      arreglo[j] += 1;
+      return false;
+    }
+    z++;
+  }
+
+  //recorrer matriz 3x3
+  int j = 4, p;
+  for(p = 0; p < 9; p++){
+    int h = 3 *(j/3) + (p/3);
+    int z = 3 *(j%3) + (p%3);
+    if(n->sudo[h][z] == numero){
+      arreglo[p] += 1;
+      return false;
+    }
+    /*printf("%d", n->sudo[h][z]);
+    if(p%3 == 2) printf("\n");*/
+  }
   
   return true;
 }
 
 int is_valid(Node* n){
   int k, b;
-  //bool valido = false;
-
   for(k = 0; k < 9; k++){
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
@@ -72,18 +89,7 @@ int is_valid(Node* n){
       }
     }
   }
-  //return 0;
-
-  
-  /*recorrer matriz 3x3
-  int j = 4, p;
-  for(p = 0; p < 9; p++){
-    int h = 3 *(j/3) + (p/3);
-    int z = 3 *(j%3) + (p%3);
-    printf("%d", n->sudo[h][z]);
-    if(p%3 == 2) printf("\n");
-  }*/
-    return 1;
+  return 1;
 }
 
 bool busqueda(Node * nodoNuevo, int aumento, bool mov){
