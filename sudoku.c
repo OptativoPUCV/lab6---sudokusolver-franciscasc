@@ -66,7 +66,7 @@ int is_valid(Node* n){
     printf("%d", n->sudo[h][z]);
     if(p%3 == 2) printf("\n");
   }
-    return 0;
+    return 1;
 }
 
 bool busqueda(Node * nodoNuevo, int aumento, bool mov){
@@ -91,6 +91,7 @@ List* get_adj_nodes(Node* n){
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
+      //if(is_valid(nodoNuevo))
       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
       if(nuevoMov != true){
         break;
