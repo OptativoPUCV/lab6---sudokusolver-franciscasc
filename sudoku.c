@@ -175,12 +175,12 @@ Node* DFS(Node* initial, int* cont){
     }
     (*cont)++;
   } 
-  if(*cont == 0 ) return NULL;
+  if(*cont == 0) return NULL;
   //free(initial);
-  return initial;
+  if(is_final(initial)) return initial;
+  return NULL;
   
 }
-
 
 
 
