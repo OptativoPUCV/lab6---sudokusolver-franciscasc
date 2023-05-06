@@ -167,7 +167,7 @@ Node* DFS(Node* initial, int* cont){
 
     List *listaAdy = get_adj_nodes(nodo);
     Node *nodoAux = first(listaAdy);
-    if(!is_valid(nodoAux)){ 
+    while(!is_valid(nodoAux)){ 
       push(S, nodoAux);
       nodoAux = next(listaAdy);
     } 
