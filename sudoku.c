@@ -66,13 +66,12 @@ bool verificar(Node* n, int numero){
 
 int is_valid(Node* n){
   int k, b;
-  bool valido = false;
+  //bool valido = false;
 
   for(k = 0; k < 9; k++){
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
-        valido = verificar(n, k);
-        if(valido == true)
+        if(verificar(n, k))
           return 0;
       }
     }
