@@ -162,12 +162,10 @@ Node* DFS(Node* initial, int* cont){
     //if(*cont == 0) printf("h\n");
     Node * nodo = first(S);
     pop(S);
-    if(is_final(nodo)) 
-      return nodo;
-
+    if(is_final(nodo)) return nodo;
     List *listaAdy = get_adj_nodes(nodo);
     Node *nodoAux = first(listaAdy);
-    while(!is_valid(nodoAux)){ 
+    while(is_valid(nodoAux)){ 
       push(S, nodoAux);
       nodoAux = next(listaAdy);
     } 
