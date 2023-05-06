@@ -78,8 +78,11 @@ bool verificar(Node* n, int fila, int col, int numero){
     if(p%3 == 2) printf("\n");*/
     if(n->sudo[h][z] == numero && h != fila && z != col){
       arreglo[p] = 1;
-      if(arreglo[p] == 1) return true;
     }
+    else{
+      arreglo[p] = 0;
+    }
+    if(arreglo[p] == 1) return true;
   }
   
   return false;
@@ -164,7 +167,6 @@ Node* DFS(Node* initial, int* cont){
 
     List *listaAdy = get_adj_nodes(nodo);
     Node *nodoAux = first(listaAdy);
-   
     if(nodoAux != NULL){ 
       push(S, nodoAux);
       nodoAux = next(listaAdy);
