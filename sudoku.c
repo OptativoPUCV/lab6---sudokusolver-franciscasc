@@ -44,16 +44,32 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
-
-  int k, b;
+bool verificar(Node* n, int numero){
   int arreglo[10] = {};
- 
+  int h, z;
+  for(h = h+1; h <= 9; h++){
+    if(n->sudo[h][z] == numero){
+      arreglo[h] = 1;
+    }
+    else{
+      arreglo[h] = 0;
+    }
+    if(arreglo[n->sudo[h][z]] == 0)
+      return true;
+  }
+  
+  return false;
+}
+
+int is_valid(Node* n){
+  int k, b;
+  bool valido = false;
+  //int arreglo[10] = {};
   for(k = 0; k < 9; k++){
-    printf("%d", arreglo[k]);
+    //printf("%d", arreglo[k]);
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
-       
+        valido = verificar(n, k);
       }
     }
   }
@@ -65,7 +81,7 @@ int is_valid(Node* n){
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
-    printf("\n%d", n->sudo[h][z]);
+    printf("%d", n->sudo[h][z]);
     if(p%3 == 2) printf("\n");
   }
     return 1;

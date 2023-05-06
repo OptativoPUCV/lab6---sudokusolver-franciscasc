@@ -361,3 +361,21 @@ Sat 06 May 2023 05:41:37 PM UTC:
  tests:  3|3
 total_score: 25/70
 d645e8b
+Sat 06 May 2023 05:54:52 PM UTC: 
+ sudoku.c | 28 ++++++++++++++++++++++------
+ 1 file changed, 22 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:66:8: error: variable ‘valido’ set but not used [-Werror=unused-but-set-variable]
+   66 |   bool valido = false;
+      |        ^~~~~~
+test.c: In function ‘verificar’:
+sudoku.c:50:9: error: ‘h’ is used uninitialized [-Werror=uninitialized]
+   50 |   for(h = h+1; h <= 9; h++){
+      |       ~~^~~~~
+sudoku.c:49:10: error: ‘z’ may be used uninitialized [-Werror=maybe-uninitialized]
+   49 |   int h, z;
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+8a066fa
