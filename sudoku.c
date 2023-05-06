@@ -154,7 +154,7 @@ Node* DFS(Node* initial, int* cont){
   push(S, initial);
   
   while(!is_empty(S)){
-    printf("h\n");
+    if(cont == 0) printf("h\n");
     Node * nodo = first(S);
     pop(S);
     if(is_final(nodo)) 
@@ -162,7 +162,6 @@ Node* DFS(Node* initial, int* cont){
 
     List *listaAdy = get_adj_nodes(nodo);
     Node *nodoAux = first(listaAdy);
-    //printf("h\n");
     if(nodoAux != NULL){
       push(S, nodoAux);
       nodoAux = next(listaAdy);
