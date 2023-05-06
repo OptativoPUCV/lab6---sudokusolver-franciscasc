@@ -166,6 +166,7 @@ Node* DFS(Node* initial, int* cont){
     List *listaAdy = get_adj_nodes(nodo);
     if(listaAdy == NULL) return NULL;
     Node *nodoAux = first(listaAdy);
+    
     if(nodoAux != NULL){
       push(S, nodoAux);
       nodoAux = next(listaAdy); 
@@ -173,6 +174,7 @@ Node* DFS(Node* initial, int* cont){
     } 
     (*cont)++;
   }
+  free(initial);
   return NULL;
 }
 
