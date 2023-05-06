@@ -171,7 +171,6 @@ Node* DFS(Node* initial, int* cont){
     
     (*cont)++;
     if(*cont == 1) printf("\n%i", *cont);
-    if(is_empty(S)) break;
   }
   return NULL;
 }
