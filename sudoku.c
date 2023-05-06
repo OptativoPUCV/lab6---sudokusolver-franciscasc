@@ -170,7 +170,7 @@ Node* DFS(Node* initial, int* cont){
     Node *nodoAux = first(listaAdy);
 
     //insertar nodos en la pila
-    if(nodoAux != NULL){
+    while(nodoAux != NULL){
       push(S, nodoAux);
       nodoAux = next(listaAdy); 
     }
