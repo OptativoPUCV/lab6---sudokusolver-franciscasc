@@ -48,7 +48,7 @@ bool verificar(Node* n, int fila, int col, int numero){
   //int arreglo[10] = {};
   //filas
   for(int h = 0; h < 9; h++){
-    if(n->sudo[fila][h] == numero && h != col){
+    if(n->sudo[fila][h] == numero && h != fila){
       //arreglo[h] = 1;
       return true;
     }
@@ -56,7 +56,7 @@ bool verificar(Node* n, int fila, int col, int numero){
 
   //columnas
   for(int j = 0; j < 9; j++){
-    if(n->sudo[j][col] == numero && j != fila){
+    if(n->sudo[j][col] == numero && j != col){
       //arreglo[j] = 1;
       return true;
     }
