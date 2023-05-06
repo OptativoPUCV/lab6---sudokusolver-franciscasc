@@ -177,8 +177,8 @@ Node* DFS(Node* initial, int* cont){
   } 
   free(initial);
   if(*cont == 0) return NULL;
-  if(!is_valid(initial)) return initial;
-  return NULL;
+  return initial;
+  
 }
 
 
