@@ -170,8 +170,8 @@ Node* DFS(Node* initial, int* cont){
     }
     
     (*cont)++;
+    if(*cont == 1) printf("%i", *cont);
   }
-  if(*cont == 1) printf("%i", *cont);
   return NULL;
 }
 
