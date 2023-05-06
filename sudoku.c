@@ -168,8 +168,8 @@ Node* DFS(Node* initial, int* cont){
     if(nodoAux != NULL){ 
       push(S, nodoAux);
       nodoAux = next(listaAdy);
-      (*cont)++;
-    }
+    } 
+    (*cont)++;
     if(*cont == 1) printf("\n%i", *cont);
   }
   return NULL;
