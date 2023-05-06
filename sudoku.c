@@ -154,7 +154,7 @@ Node* DFS(Node* initial, int* cont){
   push(S, initial);
   
   while(!is_empty(S)){
-    if(cont == 0) printf("h\n");
+    if(*cont == 1) printf("h\n");
     Node * nodo = first(S);
     pop(S);
     if(is_final(nodo)) 
