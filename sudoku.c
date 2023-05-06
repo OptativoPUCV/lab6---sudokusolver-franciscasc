@@ -152,6 +152,7 @@ Node* DFS(Node* initial, int* cont){
   Stack * S = createStack(); 
   if(S == NULL) return NULL;
   push(S, initial);
+  
   while(!is_empty(S)){
     Node * nodo = first(S);
     pop(S);
@@ -166,6 +167,7 @@ Node* DFS(Node* initial, int* cont){
     }
     
     (*cont)++;
+    free(nodo);
    
   }
   return NULL;
