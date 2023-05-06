@@ -47,29 +47,26 @@ void print_node(Node* n){
 int is_valid(Node* n){
 
   int k, b, m;
+  int a[10] = {};
   for(k = 0; k < 9; k++){
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
-        for(m = 1; m < 9; m++){
-          if(n->sudo[k][m] == 0 && n->sudo[b][m] == 0){
-            return 1;
-            
-          }
-        }
+       
       }
     }
   }
   //return 0;
 
   
-  /*recorrer matriz 3x3
-  int j = 4, p;
+  //recorrer matriz 3x3
+  int j = 0, p;
   for(p = 0; p < 9; p++){
+    j+=1;
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
     printf("%d", n->sudo[h][z]);
     if(p%3 == 2) printf("\n");
-  }*/
+  }
     return 0;
 }
 
