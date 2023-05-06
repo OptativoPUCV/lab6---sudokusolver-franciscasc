@@ -54,7 +54,7 @@ bool verificar(Node* n, int numero){
     }
     z++;
   }
-
+  z = 0;
   for(int j = 0; j < 9; j++){
     if(n->sudo[j][z] == numero){
       arreglo[j] += 1;
