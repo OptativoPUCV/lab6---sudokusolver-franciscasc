@@ -162,10 +162,12 @@ Node* DFS(Node* initial, int* cont){
     Node * nodo = first(S);
     pop(S);
     if(is_final(nodo)) return nodo;
+    //obtener lista de nodos adyacentes
     List *listaAdy = get_adj_nodes(nodo);
     if(listaAdy == NULL) return NULL;
     Node *nodoAux = first(listaAdy);
-    
+
+    //insertar nodos en la pila
     if(nodoAux != NULL){
       push(S, nodoAux);
       nodoAux = next(listaAdy); 
@@ -175,7 +177,8 @@ Node* DFS(Node* initial, int* cont){
   } 
   free(initial);
   if(*cont == 0) return NULL;
-  return initial;
+  if(!is_valid(initial)) return initial;
+  return NULL;
 }
 
 
