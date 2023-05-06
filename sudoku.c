@@ -44,26 +44,23 @@ void print_node(Node* n){
     printf("\n");
 }
 
-bool verificar(Node* n, int numero){
+bool verificar(Node* n, int fila, int col, int numero){
   int arreglo[10] = {};
-  int z = 0;
+  //filas
   for(int h = 0; h < 9; h++){
-    if(n->sudo[h][z] == numero){
+    if(n->sudo[fila][h] == numero){
       arreglo[h] = 1;
       if(arreglo[h] > 1) 
         return false;
     }
-    z++;
   }
   
-  z = 0;
   for(int j = 0; j < 9; j++){
-    if(n->sudo[j][z] == numero){
+    if(n->sudo[j][col] == numero){
       arreglo[j] = 1;
       if(arreglo[j] > 1)
         return false;
     }
-    z++;
   }
 
   //recorrer matriz 3x3
@@ -71,13 +68,13 @@ bool verificar(Node* n, int numero){
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
+    /*printf("%d", n->sudo[h][z]);
+    if(p%3 == 2) printf("\n");*/
     if(n->sudo[h][z] == numero){
       arreglo[p] = 1;
       if(arreglo[p] > 1) 
         return false;
     }
-    /*printf("%d", n->sudo[h][z]);
-    if(p%3 == 2) printf("\n");*/
   }
   
   return true;
@@ -88,7 +85,7 @@ int is_valid(Node* n){
   for(k = 0; k < 9; k++){
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
-        if(!verificar(n, n->sudo[k][b]))
+        if(!verificar(n, k, b, n->sudo[k][b]))
           return 0;
       }
     }
