@@ -173,7 +173,6 @@ Node* DFS(Node* initial, int* cont){
       nodoAux = next(listaAdy); 
     }
     (*cont)++;
-    initial = last(listaAdy);
   } 
 
   //printf("%d\n", *cont);
