@@ -62,19 +62,19 @@ bool verificar(Node* n, int fila, int col, int numero){
     }
   }
 
-  //recorrer matriz 3x3 función readme
+  /*recorrer matriz 3x3 función readme
   int j = 4, p;
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
-    /*printf("%d", n->sudo[h][z]);
-    if(p%3 == 2) printf("\n");*/
+    printf("%d", n->sudo[h][z]);
+    if(p%3 == 2) printf("\n");
     if(n->sudo[h][z] == numero){
       //arreglo[p] = 1;
       //if(arreglo[p] > 1) 
         return true;
     }
-  }
+  }*/
   
   return false;
 }
