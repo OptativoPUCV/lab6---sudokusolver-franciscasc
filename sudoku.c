@@ -50,7 +50,7 @@ int is_valid(Node* n){
 
   
   //recorrer matriz 3x3
-  int j = 5, p;
+  int j = 4, p;
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
