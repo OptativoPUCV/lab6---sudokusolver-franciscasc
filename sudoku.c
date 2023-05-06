@@ -149,16 +149,15 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   Stack * S = createStack(); 
   push(S, initial);
-  while(S != NULL){
-    //if(!is_empty(S)){
+  /*while(S != NULL){
+    if(!is_empty(S)){
       Node *nodo = first(S);
-      nodo = pop(S);
+      pop(S);
       if(is_final(nodo)) return nodo;
-    //}
+    }
     push(S, get_adj_nodes(initial));
     cont++;
-  }
-  //free(initial);
+  }*/
   
   return NULL;
 }
