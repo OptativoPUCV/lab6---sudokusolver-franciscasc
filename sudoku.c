@@ -45,20 +45,20 @@ void print_node(Node* n){
 }
 
 bool verificar(Node* n, int fila, int col, int numero){
-  //int arreglo[10] = {};
+  int arreglo[10] = {};
   //filas
   for(int h = 0; h < 9; h++){
     if(n->sudo[fila][h] == numero && h != col){
-      //arreglo[h] = 1;
-      return true;
+      arreglo[h] = 1;
+      if(arreglo[h] == 1) return true;
     }
   }
 
   //columnas
   for(int j = 0; j < 9; j++){
     if(n->sudo[j][col] == numero && j != fila){
-      //arreglo[j] = 1;
-      return true;
+      arreglo[j] = 1;
+      if(arreglo[j] == 1) return true;
     }
   }
 
