@@ -172,8 +172,9 @@ Node* DFS(Node* initial, int* cont){
       nodoAux = next(listaAdy); 
       //printf("h ");
     } 
-    (*cont)++;
-  }
+    if(is_valid(initial)){
+      (*cont)++;
+    }
   free(initial);
   return NULL;
 }
