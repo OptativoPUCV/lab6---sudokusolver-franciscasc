@@ -172,8 +172,6 @@ Node* DFS(Node* initial, int* cont){
       push(S, nodoAux);
       nodoAux = next(listaAdy); 
     }
-    int h = get_size(S);
-    printf("%d\n", h);
     (*cont)++;
   } 
 
