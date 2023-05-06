@@ -68,18 +68,19 @@ bool verificar(Node* n, int fila, int col, int numero){
     if(arreglo[j] == 1) return true;
   }
 
-  /*recorrer matriz 3x3 función readme
-  int j = 4, p;
+  //recorrer matriz 3x3 función readme
+  int j, p;
+  j = col/3 + (fila/3) * 3;
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
-    printf("%d", n->sudo[h][z]);
-    if(p%3 == 2) printf("\n");
-    if(n->sudo[h][z] == numero && h != z){
+    /*printf("%d", n->sudo[h][z]);
+    if(p%3 == 2) printf("\n");*/
+    if(n->sudo[h][z] == numero && h != fila && z != col){
       arreglo[p] = 1;
       if(arreglo[p] == 1) return true;
     }
-  }*/
+  }
   
   return false;
 }
@@ -168,8 +169,6 @@ Node* DFS(Node* initial, int* cont){
       nodoAux = next(listaAdy);
       (*cont)++;
     }
-    //if(is_valid(nodoAux)) 
-      
     if(*cont == 1) printf("\n%i", *cont);
   }
   return NULL;
