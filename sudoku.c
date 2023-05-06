@@ -113,7 +113,7 @@ List* get_adj_nodes(Node* n){
     if(n == NULL) return NULL;
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
-      nodoNuevo = copy(n);
+      if(is_valid(n)) nodoNuevo = copy(n);
       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
       if(nuevoMov != true)
         break;
@@ -125,10 +125,11 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-      }*/
-      if(is_valid(nodoNuevo)){
-        pushBack(list, nodoNuevo);
       }
+      if(is_valid(nodoNuevo)){
+        
+      }*/
+      pushBack(list, nodoNuevo);
     }
   
   return list;
