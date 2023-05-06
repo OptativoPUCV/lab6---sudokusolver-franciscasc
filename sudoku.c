@@ -54,7 +54,8 @@ bool verificar(Node* n, int fila, int col, int numero){
         return false;
     }
   }
-  
+
+  //columnas
   for(int j = 0; j < 9; j++){
     if(n->sudo[j][col] == numero){
       arreglo[j] = 1;
@@ -63,7 +64,7 @@ bool verificar(Node* n, int fila, int col, int numero){
     }
   }
 
-  //recorrer matriz 3x3
+  //recorrer matriz 3x3 función readme
   int j = 4, p;
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
@@ -150,10 +151,15 @@ Node* DFS(Node* initial, int* cont){
   push(S, initial);
   while(S != NULL){
     if(top(S) != NULL) {
-      pop(S);
+      pop(S); 
       break;
     }
+    if(is_final(initial)) return initial;
+    //get_adj_nodes(initial);
+    push(S, get_adj_nodes(initial));
+    cont++;
   }
+  free(initial);
   
   return NULL;
 }
