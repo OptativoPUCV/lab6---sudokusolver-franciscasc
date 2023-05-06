@@ -6,6 +6,7 @@
 
 typedef struct{
    int sudo[9][9];
+    bool visitado;
 }Node;
 
 Node* createNode(){
@@ -157,12 +158,14 @@ Node* DFS(Node* initial, int* cont){
   Stack * S = createStack(); 
   if(S == NULL) return NULL;
   push(S, initial);
-  
-  while(!is_empty(S)){
+
+  while(get_size(S) != 0){
     Node * nodo = first(S);
     pop(S);
     if(is_final(nodo)) return nodo;
+    if(nodo->visitado == true) continue;
     //obtener lista de nodos adyacentes
+    nodo->visitado = true; 
     List *listaAdy = get_adj_nodes(nodo);
     if(listaAdy == NULL) return NULL;
     Node *nodoAux = first(listaAdy);
