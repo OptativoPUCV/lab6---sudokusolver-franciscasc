@@ -164,12 +164,12 @@ Node* DFS(Node* initial, int* cont){
     pop(S);
     if(is_final(nodo)) return nodo;
     List *listaAdy = get_adj_nodes(nodo);
+    if(listaAdy == NULL) return NULL;
     Node *nodoAux = first(listaAdy);
     while(nodoAux != NULL){
       push(S, nodoAux);
       nodoAux = next(listaAdy); 
-      printf("h ");
-      break;
+      //printf("h ");
     } 
     (*cont)++;
   }
