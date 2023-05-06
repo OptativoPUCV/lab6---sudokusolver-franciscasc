@@ -176,11 +176,8 @@ Node* DFS(Node* initial, int* cont){
     (*cont)++;
   } 
   if(*cont == 0) return NULL;
-  else{
-    return initial;
-  }
   free(initial);
-  return NULL;
+  return initial;
   
 }
 
