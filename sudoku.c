@@ -50,8 +50,8 @@ int is_valid(Node* n){
   int arreglo[10] = {};
  
   for(k = 0; k < 9; k++){
+    printf("%d", arreglo[k]);
     for(b = 0; b < 9; b++){
-      printf("%d\n", arreglo[k]);
       if(n->sudo[k][b] != 0){
        
       }
