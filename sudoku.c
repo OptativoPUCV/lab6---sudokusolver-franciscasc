@@ -114,11 +114,9 @@ List* get_adj_nodes(Node* n){
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
       nodoNuevo = copy(n);
-      if(is_valid(nodoNuevo)){
-        nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
-          if(nuevoMov != true)
-            break;
-      }
+      nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
+      if(nuevoMov != true)
+        break;
     //esto no fucionó
       /*for(m = 0; m < 9; m++){
         for(z= 0; z < 9; z++){
@@ -129,7 +127,10 @@ List* get_adj_nodes(Node* n){
         }
       }*/
       pushBack(list, nodoNuevo);
+      if(is_valid(nodoNuevo))
+        return list;
     }
+  
   return list;
 }
 
