@@ -47,9 +47,11 @@ void print_node(Node* n){
 int is_valid(Node* n){
 
   int k, b;
-  //int a[10] = {};
+  int arreglo[10] = {};
+ 
   for(k = 0; k < 9; k++){
     for(b = 0; b < 9; b++){
+      printf("%d\n", arreglo[k]);
       if(n->sudo[k][b] != 0){
        
       }
