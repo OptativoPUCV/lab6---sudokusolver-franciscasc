@@ -51,6 +51,9 @@ bool verificar(Node* n, int fila, int col, int numero){
     if(n->sudo[fila][h] == numero && h != col){
       arreglo[h] = 1;
       if(arreglo[h] != 1) return false;
+      else{
+        return true;
+      }
     }
   }
 
@@ -59,6 +62,9 @@ bool verificar(Node* n, int fila, int col, int numero){
     if(n->sudo[j][col] == numero && j != fila){
       arreglo[j] = 1;
       if(arreglo[j] != 1) return false;
+      else{
+        return true;
+      }
     }
   }
 
