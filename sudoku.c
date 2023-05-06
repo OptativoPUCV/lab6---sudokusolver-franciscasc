@@ -48,24 +48,24 @@ bool verificar(Node* n, int fila, int col, int numero){
   int arreglo[10] = {};
   //filas
   for(int h = 0; h < 9; h++){
-    if(n->sudo[fila][h] == numero && h != col){
-      arreglo[h] = 1;
-      if(arreglo[h] != 1) return false;
-      else{
-        return true;
-      }
+    if(n->sudo[fila][h] != numero && h == col){
+      arreglo[h] = 0;
     }
+    else{
+      arreglo[h] = 1;
+    }  
+    if(arreglo[h] == 1) return true;
   }
 
   //columnas
   for(int j = 0; j < 9; j++){
     if(n->sudo[j][col] == numero && j != fila){
       arreglo[j] = 1;
-      if(arreglo[j] != 1) return false;
-      else{
-        return true;
-      }
     }
+    else{
+      arreglo[j] = 0;
+    }
+    if(arreglo[j] == 1) return true;
   }
 
   /*recorrer matriz 3x3 función readme
@@ -81,7 +81,7 @@ bool verificar(Node* n, int fila, int col, int numero){
     }
   }*/
   
-  return true;
+  return false;
 }
 
 int is_valid(Node* n){
