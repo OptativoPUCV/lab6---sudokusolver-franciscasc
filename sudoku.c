@@ -89,11 +89,11 @@ int is_valid(Node* n){
     for(b = 0; b < 9; b++){
       if(n->sudo[k][b] != 0){
         if(!verificar(n, n->sudo[k][b]))
-          return 0;
+          return 1;
       }
     }
   }
-  return 1;
+  return 0;
 }
 
 bool busqueda(Node * nodoNuevo, int aumento, bool mov){
