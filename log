@@ -655,3 +655,13 @@ sudoku.c:156:14: error: variable ‘nodo’ set but not used [-Werror=unused-but
 cc1: all warnings being treated as errors
 Compilation failed
 fdf208c
+Sat 06 May 2023 09:02:50 PM UTC: 
+ sudoku.c | 13 +++++--------
+ 1 file changed, 5 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:157:10: error: void value not ignored as it ought to be
+  157 |     nodo = pop(S);
+      |          ^
+Compilation failed
+cc1340e
