@@ -1022,3 +1022,9 @@ sudoku.c:176:8: error: ‘nodoAux’ undeclared (first use in this function)
 sudoku.c:176:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 676a484
+Sat 06 May 2023 10:04:55 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 55/70
+280d39a

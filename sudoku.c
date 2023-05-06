@@ -173,7 +173,7 @@ Node* DFS(Node* initial, int* cont){
       //printf("h ");
     } 
   } 
-  free(nodoAux);
+  free(initial);
   return NULL;
 }
 
