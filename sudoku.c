@@ -73,7 +73,7 @@ int is_valid(Node* n){
       if(n->sudo[k][b] != 0){
         valido = verificar(n, k);
         if(valido == true)
-          return 1;
+          return 0;
       }
     }
   }
@@ -88,7 +88,7 @@ int is_valid(Node* n){
     printf("%d", n->sudo[h][z]);
     if(p%3 == 2) printf("\n");
   }*/
-    return 0;
+    return 1;
 }
 
 bool busqueda(Node * nodoNuevo, int aumento, bool mov){
