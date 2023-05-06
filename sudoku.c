@@ -48,11 +48,11 @@ bool verificar(Node* n, int fila, int col, int numero){
   int arreglo[10] = {};
   //filas
   for(int h = 0; h < 9; h++){
-    if(n->sudo[fila][h] != numero && h == col){
-      arreglo[h] = 0;
+    if(n->sudo[fila][h] == numero && h != col){
+      arreglo[h] = 1;
     }
     else{
-      arreglo[h] = 1;
+      arreglo[h] = 0;
     }  
     if(arreglo[h] == 1) return true;
   }
