@@ -160,12 +160,11 @@ Node* DFS(Node* initial, int* cont){
   push(S, initial);
 
   while(get_size(S) != 0){
-    Node * nodo = first(S);
+    Node * nodo = top(S);
     pop(S);
     if(is_final(nodo)) return nodo;
-    if(nodo->visitado == true) continue;
+    
     //obtener lista de nodos adyacentes
-    nodo->visitado = true; 
     List *listaAdy = get_adj_nodes(nodo);
     if(listaAdy == NULL) return NULL;
     Node *nodoAux = first(listaAdy);
