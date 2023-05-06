@@ -169,10 +169,12 @@ Node* DFS(Node* initial, int* cont){
 
     //insertar nodos en la pila
     if(nodoAux != NULL){
-      push(S, nodoAux);
-      nodoAux = next(listaAdy); 
-      printf("h ");
+      if(is_final(nodoAux)){
+        push(S, nodoAux);
+        nodoAux = next(listaAdy); 
+      }
     }
+      printf("h ");
     (*cont)++;
   } 
 
