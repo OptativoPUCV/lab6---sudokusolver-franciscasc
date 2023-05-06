@@ -113,7 +113,8 @@ List* get_adj_nodes(Node* n){
     if(n == NULL) return NULL;
     for(h = 1; h <= 9; h++){
       Node* nodoNuevo = createNode();
-      if(is_valid(n)) nodoNuevo = copy(n);
+      //if(is_valid(n)) 
+      nodoNuevo = copy(n);
       nuevoMov = busqueda(nodoNuevo, h, nuevoMov);  
       if(nuevoMov != true)
         break;
