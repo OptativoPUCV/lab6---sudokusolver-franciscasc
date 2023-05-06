@@ -67,9 +67,9 @@ bool verificar(Node* n, int fila, int col, int numero){
   for(p = 0; p < 9; p++){
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
-    printf("%d", n->sudo[h][z]);
-    if(p%3 == 2) printf("\n");
-    if(n->sudo[h][z] == numero){
+    /*printf("%d", n->sudo[h][z]);
+    if(p%3 == 2) printf("\n");*/
+    if(n->sudo[h][z] == numero && h != z){
       arreglo[p] = 1;
       if(arreglo[p] == 1) return true;
     }
