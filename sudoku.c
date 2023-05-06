@@ -48,17 +48,17 @@ bool verificar(Node* n, int fila, int col, int numero){
   //int arreglo[10] = {};
   //filas
   for(int h = 0; h < 9; h++){
-    if(n->sudo[fila][h] == numero && h != col){
+    if(n->sudo[fila][h] != numero && h == col){
       //arreglo[h] = 1;
-      return true;
+      return false;
     }
   }
 
   //columnas
   for(int j = 0; j < 9; j++){
-    if(n->sudo[j][col] == numero && j != fila){
+    if(n->sudo[j][col] != numero && j == fila){
       //arreglo[j] = 1;
-      return true;
+      return false;
     }
   }
 
@@ -76,7 +76,7 @@ bool verificar(Node* n, int fila, int col, int numero){
     }
   }*/
   
-  return false;
+  return true;
 }
 
 int is_valid(Node* n){
