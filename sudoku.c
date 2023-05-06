@@ -51,11 +51,10 @@ int is_valid(Node* n){
   
   //recorrer matriz 3x3
   int j = 5, p;
-  int h, z;
   for(p = 0; p < 9; p++){
-    h = 3 *(j/3) + (p/3);
-    z = 3 *(j%3) + (p%3);
-    printf("%d", n->sudo[h][z]);
+    int h = 3 *(j/3) + (p/3);
+    int z = 3 *(j%3) + (p%3);
+    //printf("%d", n->sudo[h][z]);
     if(p%3 == 2) printf("\n");
   }
     return 1;
