@@ -163,7 +163,7 @@ Node* DFS(Node* initial, int* cont){
     List *listaAdy = get_adj_nodes(nodo);
     Node *nodoAux = first(listaAdy);
    
-    if(is_valid(nodoAux)){ 
+    if(nodoAux != NULL){ 
       //if(*cont == 0) printf("h");
       push(S, nodoAux);
       nodoAux = next(listaAdy);
