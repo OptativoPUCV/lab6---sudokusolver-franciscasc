@@ -164,7 +164,7 @@ Node* DFS(Node* initial, int* cont){
     Node *nodoAux = first(listaAdy);
    
     if(nodoAux != NULL){ 
-      if(is_valid(nodoAux)){
+      if(!is_valid(nodoAux)){
         push(S, nodoAux);
         nodoAux = next(listaAdy);
       } 
