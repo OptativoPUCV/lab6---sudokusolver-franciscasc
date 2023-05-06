@@ -61,7 +61,7 @@ int is_valid(Node* n){
   //recorrer matriz 3x3
   int j = 1, p;
   for(p = 0; p < 9; p++){
-    j+=1;
+    j++;
     int h = 3 *(j/3) + (p/3);
     int z = 3 *(j%3) + (p%3);
     printf("%d", n->sudo[h][z]);
