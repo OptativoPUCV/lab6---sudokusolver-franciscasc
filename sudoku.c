@@ -174,11 +174,12 @@ Node* DFS(Node* initial, int* cont){
       nodoAux = next(listaAdy); 
     }
     (*cont)++;
+    free(nodo);
   } 
 
   //printf("%d\n", *cont);
   if(*cont == 0) return NULL;
-  free(initial);
+  //free(initial);
   return NULL;
   
 }
